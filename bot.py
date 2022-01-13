@@ -11,7 +11,7 @@ def criar_arquivo_auxiliar(nome,valor):
 
 
 def gerar_pdf(nome_arquivo):
-    aux = nome_arquivo = ".pdf"
+    aux = nome_arquivo + ".pdf"
     subprocess.run(["pdflatex", "main.tex"])
     subprocess.run(["mv", "main.pdf", aux])
 
@@ -30,8 +30,5 @@ while (cont < N):
     criar_arquivo_auxiliar(nome_aluno,valor_aluno)  
     gerar_pdf(nome_aluno)
     cont = cont +1
-
-
-
 
 
